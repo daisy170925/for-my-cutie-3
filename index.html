@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For You ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FLOATING HEARTS -->
+
+  <div class="heart-background">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+  </div>
+
+  <div class="container">
+
+    <!-- TITLE -->
+
+    <h1>Hey Babyyyy ❤️</h1>
+
+    <p class="intro">
+      Just a little place filled with my love for you
+    </p>
+
+    <!-- SHORT LETTER -->
+
+    <div class="letter">
+
+      <h2>My Cutiepie ❤️</h2>
+
+      <p>
+        I love you more than I love eating chicken.
+      </p>
+
+    </div>
+
+    <!-- LOVE METER -->
+
+    <div class="letter">
+
+      <h2>How Much Do You Love Me? 🤨</h2>
+
+      <button id="loveButton">
+        Click to Measure ❤️
+      </button>
+
+      <h3 id="loveResult">❤️</h3>
+
+    </div>
+
+    <!-- MUSIC + PHOTO SECTION -->
+
+    <div class="music-section">
+
+      <img src="images/photo1.jpg" alt="Our photo">
+
+      <div class="spotify-section">
+
+        <p class="song-text">
+          This song is for you 🎵
+        </p>
+
+        <iframe
+          data-testid="embed-iframe"
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/190P8pyw8J4gr6ygwUlG3z?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+    <!-- POEM -->
+
+    <div class="letter">
+
+      <h2>For You ❤️</h2>
+
+      <p>
+        I think my favorite thing about you<br>
+        is how gentle you are with me.<br><br>
+
+        The way your brown eyes soften<br>
+        whenever you look at me,<br>
+        like they were made to hold warmth.<br><br>
+
+        The way your smile somehow fixes<br>
+        the worst parts of my day,<br>
+        and how your soft lips speak to me<br>
+        with so much patience and love.<br><br>
+
+        I love the way you talk to me,<br>
+        like my thoughts matter,<br>
+        like my feelings deserve care.<br><br>
+
+        Even when my mind gets loud<br>
+        and overthinking consumes me,<br>
+        you never make me feel difficult to love.<br>
+        You calm me down so gently,<br>
+        piece by piece,<br>
+        until everything feels okay again.<br><br>
+
+        And maybe that's why I love you so much.<br>
+        Because your love feels soft.<br>
+        Safe.<br>
+        Patient.<br><br>
+
+        Loving you feels like finally finding peace<br>
+        in another person ❤️
+      </p>
+
+    </div>
+
+    <!-- SECRET MESSAGE -->
+
+    <p class="secret">
+      psst... I miss your soft lips ❤️
+    </p>
+
+    <!-- OPEN LETTER -->
+
+    <div class="letter">
+
+      <h2>Crazythoughts101 💌</h2>
+
+      <button onclick="openLetter()">
+        Open Me ❤️
+      </button>
+
+      <div id="hiddenLetter" class="hidden-letter" style="display:none;">
+
+        <p>
+          SWEETIE, I miss you a lot.
+        </p>
+
+        <p>
+          You are soooooo soooooooooo sooooooooooooo cute
+          that I wanna make you pregnant LOL
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- KISS BUTTON -->
+
+<div class="letter">
+
+  <h2>Kiss Delivery Service 💋</h2>
+
+  <button onclick="kissMe()">
+    Steal a Kiss 💋
+  </button>
+
+  <h3 id="kissText"></h3>
+
+</div>
+
+
+
+    <!-- FOOTER -->
+
+    <p class="footer">
+      made with love ❤️
+    </p>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function openLetter() {
+
+      const letter =
+      document.getElementById("hiddenLetter");
+
+      if (letter.style.display === "block") {
+
+        letter.style.display = "none";
+
+      } else {
+
+        letter.style.display = "block";
+
+      }
+
+    }
+
+    const responses = [
+
+      "47% — suspicious behavior honestly",
+
+      "82% — okayyyy obsessed",
+
+      "101% — bro is DOWN BAD ❤️",
+
+      "1000% — clinically in love with me",
+
+      "∞% — you're never escaping me 😌",
+
+      "93% — acceptable. barely.",
+
+      "99999% — you adore me and we both know it"
+
+    ];
+
+    window.onload = function () {
+
+      const loveButton =
+      document.getElementById("loveButton");
+
+      const loveResult =
+      document.getElementById("loveResult");
+
+      loveButton.addEventListener("click", function () {
+
+        const random =
+        Math.floor(Math.random() * responses.length);
+
+        loveResult.innerHTML = responses[random];
+
+      });
+
+    };
+
+    function kissMe() {
+
+const messages = [
+
+  "MWAHHH 💋",
+
+  "forehead kiss deployed 😌",
+
+  "you've been kissed aggressively",
+
+  "sending 927 kisses rn",
+
+  "kiss attack successful ❤️",
+
+  "virtual cuddle initiated 🫂",
+
+  "warning: excessive affection detected"
+
+];
+
+const random =
+Math.floor(Math.random() * messages.length);
+
+document.getElementById("kissText")
+.innerHTML = messages[random];
+
+}
+
+  </script>
+
+</body>
+
+</html>
